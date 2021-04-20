@@ -1,0 +1,291 @@
+CURSO de javascript desde CERO 2021 by Yacklyon
+
+Notes: 
+1. Add the following extensions: 
+   a) JavaScript (ES6) code snippets. Es un estandar para JS que hace que el lenguaje sea mas amigable para el desarrollador. Supports JavaScript and TypeScript. Permite por ejemplo, completar el nombre de palabras reservadas en el codigo con solo apretar el Tab, con lo cual puedes escribir el codigo mas rapido.
+
+   b) Live Server. Te permite interactuar con el navegador de una manera mas rapida. Es el que permite ver los cambios automaticamente en el navegador con solo guardar los cambios en el proyecto. Esto es lo que usa Cypress??
+      - Once you have installed this extension go Setting (gear icon) on VS Code, click Setting and locate Liver Server > Settings: Custom Browser. Select your browser (Chrome). Save with CMD+S.
+
+2. alert('message')-> show a pop-up in the browser with the message as parameter.
+
+3. Actions (as show texts) in the browser needs to be inside the key <script></script>
+
+4. To link the index.html file with another one: 
+    >> <script src="prueba.js"></script>
+
+5. When you link files you have to get first the object and then the action.
+	>>  <div id="caja"></div>
+	>>  <script src="prueba.js"></script> 
+
+6. To print values on console you can use: 
+    >> console.log();
+
+7. Variables are identified with 'var' before the name. If you set more than one value to the var, it must print on console the last value assigned.  
+
+8. If you want to assign only one value to the var and do not change it, use 'let' instead 'var': 
+    >> let nombre = 'Pedro' 
+
+9. Constants are declared as const and the name in capital letters.
+    >> const PI = 3.14;
+
+10. To know the type of data of a variable, you can use 'typeof':
+	>>  var nomb;
+        nomb = "Maria";
+        console.log(typeof nomb); 
+        R/ string
+
+11. Exist several methods to get and modify properties of the variable that you print on console.log:
+    >> console.log(fruta.toUpperCase());  -> convierte el string a mayusculas.
+	>> console.log(fruta.toLowerCase());  -> convierte el string a minusculas.
+	>> console.log(curso.indexOf('c'));   -> obtiene la posicion de una letra especifica dentro del string comenzando en 0.
+	>> console.log(curso.slice(3,8));  -> returns a section of a string variable giving the beggining and end position.
+	>> console.log(curso.replace('javascript', 'php'));  -> replace the value of the variable of the first parameters to the second parameter.  
+
+12. To convert a string to number:
+    >> var numero_uno = "2";
+       console.log(Number(numero_uno));
+
+13. ARRAYS: An array is an object in which you can store information, or an articles container. Should be created as a variable or a constant and need to created with []: 
+    >> var numeros = [1,2,3,4,5];
+    To get one specific element of the array by position, you can call:
+    >> console.log(numeros[0]);               -> the number between brackets means the position of the desired element starting by 0. 
+    >> console.log(numeros.lenght);           -> shown how many elements are stored in the array.
+    >> console.log(numeros.reverse());        -> reverse the order of all elements of the array.
+    >> console.log(estudiantes.sort());       -> sort alphabetically. 
+    >> console.log(numeros.push(6));          -> Appends new elements to an array (at the end), and returns the new length of the array.
+    >> console.log(numeros.shift());          -> Removes the first element from an array and returns it.
+    >> console.log(numeros.pop());            -> Removes the last element from an array and returns it.
+    >> console.log(numeros.indexOf(3));       -> Returns the position of the element requested in the parameter.
+    >> console.log(numeros.unshift(8));       -> Inserts new elements at the start of an array.
+    
+    var grupo_a = [1,2,3];
+    var grupo_b = [4,5,6];
+    >> console.log(grupo_a.concat(grupo_b));  -> Combines two or more arrays.
+
+14. OBJECTS: They are commonly declared with 'const' and braces '{}'. All elements inside braces are characteristics of the object, I mean, are attributes of the object. 
+    >> const auto = {
+        marca: 'Toyota',
+        modelo: 2018,
+        color: "azul",
+        accesorios: [   -> Notice that you can add an array into the object too. 
+         'motor', 
+         'llantas',
+         'luces'
+        ]
+      }
+      console.log(auto);
+    If you want to get an specific attribute of the object, call it with objetc.attribute. Ex:
+    >> console.log(auto.accesorios); 
+    >> console.log(auto.marca);
+    >> console.log(auto.modelo);
+    >> console.log(auto.color);     
+
+15. LOOPS: for, while: 
+    >> // for
+
+        for(let i = 0; i <= 5; i++){
+         console.log(i);
+        }
+
+    >> // while
+
+        let i = 0;
+        while (i < 8) {
+          console.log(i);
+          i++;
+        }
+    >> //do while
+
+        let j = 0;
+        do {
+          j = j + 2;
+          console.log(j);
+        } while (j < 20);
+
+16. CONDITIONALS: IF, ELSE, ELSE-IF, SWITCH
+    >> if:
+       var a = 3;
+       if (a > 5) {
+         console.log('SI ES MAYOR A 5');
+       } else {
+         console.log('SI ES MENOR A 5');
+       }
+
+    >> if-else: 
+       var c = 12;
+       var d = 20;
+       if (c > d) {
+         console.log(`${c} es mayor que ${d}`);
+       } else{
+          console.log(`${c} es menor que ${d}`);
+       } 
+
+    >> else- if:
+       var e = 80;
+       var f = 80;
+       if (e > f) {
+         console.log(`${e} es mayor que ${f}`);
+       } else if (e == f) {
+          console.log("e y f son iguales")
+       } else{
+          console.log(`${e} es menor que ${f}`);
+       } 
+
+    >> Switch: start declaring a let variable and then replace the key with the variable's name. Each case will search match between the variable value and the case value. If doesn't match go to default break:
+
+       let curso = "javascript";
+       switch (curso) {
+         case 'java':
+           console.log("es java");
+          break;
+         case 'python':
+           console.log("es python");
+          break;
+
+         case 'javascript':
+           console.log("es javascript");
+          break;    
+         default:
+           console.log("no disponible");
+          break;
+        } 
+
+17. FUNCTIONS: A function is a block of code that will be executed ONLY WHEN IT IS CALLED.
+    >> function statement:
+       function NOMBRE (argumento){
+          declaracion;
+       } 
+    Ex: 
+     function suma(a,b) {
+         var sum = a + b;
+         console.log('La suma es :' + sum);
+       }
+    >> How to call the function:
+       NOMBRE(arg_value);
+    Ex: suma(8,4);
+
+    >> Returnable functions: are declared with empty parameters, without args.
+       function name(){
+          var nombre = "one_name";
+          return nombre;
+       }
+
+       var person = name();       
+       console.log(person); <-- Calling the function.
+
+    >> *** ARROW FUNCTION *** 
+      > Are function without name. Are anonymous.
+      Ex: 
+       var resta = (n1,n2) => n1 - n2;
+       console.log(`Result of arrow function is ${resta(8,3)}.`);
+   
+    >> Nested Functions: are function into another function.
+      Ex: 
+        function operacion() {
+           const PI = 3.14;
+           function area(radio) {
+           var area = PI *  radio * radio;
+           console.log(`El area del circulo es: ${area}`);
+        }
+        operacion.area = area;
+        }
+        var radio = 4;             <-- declaring a variable to sent to the child function.
+        operacion();               <-- calling the parent function.
+        operacion.area(radio);     <-- accesing exact point of the parent function. In this case, the area function.
+
+18. Printing elements on HTML:
+    >> <h3>Ingrese el valor del radio:</h3>
+       <input type="text" id="radio">
+
+    >> <h3>Resultado</h3>    
+       <button type="submit" onclick="area()" id = "calcular">Calcular</button>
+       <input type="text" id = "resultado">
+
+19. Eval: It evaluate an expression. Recolect and execute expected actions.
+    >>  var a = 10;
+		var b = 20;
+		var x = eval("a + b");
+		var y = eval("3 + 4");
+		var z = eval("a + 8");
+		var respt = a + z;
+		console.log(respt);  
+
+20. >> parsefloat: return the float value of the alphanumeric expression.
+      > var b = parseFloat("20.5curso");  -> 20.5
+
+    >> parseInt: retunr the integer value of the alphanumeric expression.
+      > var c = parseInt("10curso"); -> 10
+    
+    >> date.parse(): comprueba cuanto tiempo ha pasado desde la fecha de inicio a la seteada. 
+      > var dato = "january 1, 1970 1:30 PM"
+      > var resultado = Date.parse(dato);  
+
+21. Methods:
+    >> forEach: applied to arrays, it execute the statement to each value of the array and return a boolean response depending of the statement.
+    Ex: let numero = [1,2,3,4,5,6,7];   //<-- array
+        numero.forEach((value) => {
+          console.log(value == 5);      // return a boolean response for each value: 1-false. 2-false. 3-false. 4-false. 5-true. 6-false 7-false. 
+        }) 
+
+    >> some: always return booleans values,usually used to verifications. If one at least meet the condition, then return true.
+      > let numeros = [1,2,3,-4,5]
+
+        console.log(numeros.some((value) => {  // value represent all values in to the array.
+           return(value < 0); //return true.
+        }));  
+
+    >> every: is the opposite to some. Every element in the array must meet the condition.
+      > console.log(numeros.every((value) => {
+          return(value == 5); //verifying this condition in the array.
+        })) R/ false, because every element do not meet the condition.
+    
+    >> Map: creates a new array from an existing one and allows you to perform some actions on it.
+
+	  > let numb = [1,2,3,4,5,6];
+        let duplicar = numb.map(value => {
+            return value * 2;
+        });
+        console.log(duplicar); // It return a new array with the duplicate value of each element of the first array.
+                               // [2, 4, 6, 8, 10, 12] 
+
+    >> Filter: filter and create a subset of the filtered array, but do not create a new array.
+
+	  > let numbers = [1020, 3340, 7046, 2550, 1092]
+        let numeros_grandes = numbers.filter((value) => {
+           return (value > 2500);
+        });
+        console.log(numeros_grandes);  
+
+    >> Reduce: Starting from a requested position (0), it executes the action for each element of the array, returning the total value.
+
+      > let digitos = [4,3,5,2,1];
+        let respuesta = digitos.reduce((suma, dato_act) => 
+            suma + dato_act, 0);     // adds the initial value with the current data and so on, which returns the value of the sum of all the elements of the array.
+        console.log(respuesta);	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
